@@ -1,0 +1,97 @@
+﻿button {
+    cursor: pointer;
+}
+button:focus {
+    outline: none;
+    border: 1px solid #1e32d0;
+}
+button[disabled]{
+    pointer-events:none;
+}
+button[disabled] .btn-icon {
+    opacity: .5;
+}
+
+button .btn-icon {
+    width: 16px;
+    height: 16px;
+    background-image: url('/content/images/iconsprite.png');
+}
+
+    button .btn-icon.btn-icon-add {
+        background-position: -1px -2416px;
+    }
+
+    button .btn-icon.btn-icon-duplicate {
+        background-position: -1px -1888px;
+    }
+
+    button .btn-icon.btn-icon-edit {
+        background-position: 0 -1872px;
+    }
+
+    button .btn-icon.btn-icon-delete {
+        background-position: -1px -2048px;
+    }
+
+    button .btn-icon.btn-icon-refresh {
+        background-position: 0 -2586px;
+    }
+
+button .btn-text {
+    margin-left: 4px;
+}
+
+.ct-btn {
+    display: flex;
+    background-color: #fff;
+    border-width: 1px;
+    border-style: solid;
+    border-color: buttonface;
+    border-image: initial;
+    justify-content: center;
+    padding: 4px;
+    min-width: 75px;
+}
+
+    .ct-btn:hover, .ct-btn:focus {
+        border-color: #0071c1;
+        background-image: -webkit-linear-gradient(top,#eff0ec,#e1f2e9);
+        outline: none;
+    }
+
+    .ct-btn .btn-icon {
+        align-self: center;
+    }
+
+    .ct-btn .btn-icon-16 {
+        width: 16px;
+        height: 16px;
+        align-self: center;
+        margin-right: 4px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+.btn-icon-save {
+    background-image: url('/content/images/Save16.png');
+}
+
+.btn-icon-saveadd {
+    background-image: url('/content/images/SaveAdd16.png');
+}
+
+.btn-icon-close {
+    background-image: url('/content/images/Disable16.png');
+}
+
+.btn-icon-help {
+    background-image: url('/content/images/IconSprite.png');
+    background-position: 0-1600px !important;
+}
+
+.btn-align-left {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+}

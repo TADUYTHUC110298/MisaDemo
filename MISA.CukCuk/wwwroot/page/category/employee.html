@@ -1,0 +1,263 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>MISA CukCuk - Danh mục nhân viên</title>
+    <link href="/css/common/main.css" rel="stylesheet" />
+    <link href="/css/common/container.css" rel="stylesheet" />
+    <link href="/css/common/header.css" rel="stylesheet" />
+    <link href="/css/common/menu.css" rel="stylesheet" />
+    <link href="/css/common/grid.css" rel="stylesheet" />
+    <link href="/css/common/toolbar.css" rel="stylesheet" />
+    <link href="/css/common/button.css" rel="stylesheet" />
+    <link href="/css/common/dialog.css" rel="stylesheet" />
+    <link href="/css/common/input.css" rel="stylesheet" />
+    <link href="/css/page/customer.css" rel="stylesheet" />
+    <link href="/css/page/employee.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="header">
+        <div class="header-left">
+            <div class="header-logo">
+                <div class="icon-left-header"></div>
+                <div class="logo"></div>
+            </div>
+            <div class="select-restaurant">
+                <select>
+                    <option>Nhà hàng biển Đông</option>
+                    <option>Nhà hàng biển Tây</option>
+                </select>
+            </div>
+        </div>
+        <div class="header-right h-100">
+            <div class="header-center-box h-100">
+                <select style="width:200px">
+                    <option>Tiếng Việt (Tiếng Việt)</option>
+                    <option>English (Tiếng Anh)</option>
+                </select>
+            </div>
+            <div class="header-notice-box">
+                <div class="icon-globe icon" style="width:16px; height:16px;font-size: 24px;color: #fff!important;">
+                    &nbsp;
+                    <span class="number-notification">2</span>
+                </div>
+            </div>
+            <div class="header-support-box h-100">
+                <label class="label-misasupport">
+                    Tổng đài hỗ trợ MISA SUPPORT
+                </label>
+            </div>
+            <div class="header-account-box">
+                <div class="account-avatar"></div>
+                <div class="account-name"><span>Tạ Duy Thức</span></div>
+                <div class="account-action-box hide-outside-click" style="display: none;">
+                    <div class="account-action-item"><span class="icon icon-edit"></span>Thay đổi mật khẩu</div>
+                    <div class="account-action-item"><span class="icon icon-logout"></span>Đăng xuất</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="menu bg-primary">
+            <div class="menu-item">
+                <div class="menu-item-icon icon-home"></div>
+                <div class="menu-item-text">Tổng quan</div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-icon icon-report"></div>
+                <div class="menu-item-text">Báo cáo</div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-icon icon-sale"></div>
+                <div class="menu-item-text">Bán hàng</div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-icon icon-directory"></div>
+                <div class="menu-item-text">Danh mục</div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-icon icon-money"></div>
+                <div class="menu-item-text">Quỹ tiền mặt</div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-icon icon-discount"></div>
+                <div class="menu-item-text">Khuyến mại</div>
+            </div>
+        </div>
+        <!--Content-->
+        <div class="content">
+            <div class="content-header">
+                <div class="ct-breadcrumb">
+                    <div class="breadcrumb-main">Danh mục</div>
+                    <div class="breadcrumb-sub">Nhân viên</div>
+                </div>
+            </div>
+            <div class="content-body">
+                <!--Toolbar-->
+                <div class="toolbar">
+                    <button id="btnAdd">
+                        <div class="btn-icon btn-icon-add"></div>
+                        <dic class="btn-text">Thêm</dic>
+                    </button>
+                    <button id="btnDuplicate" disabled>
+                        <div class="btn-icon btn-icon-duplicate"></div>
+                        <dic class="btn-text">Sao chép</dic>
+                    </button>
+                    <button id="btnEdit">
+                        <div class="btn-icon btn-icon-edit"></div>
+                        <dic class="btn-text">Sửa</dic>
+                    </button>
+                    <button id="btnDelete">
+                        <div class="btn-icon btn-icon-delete"></div>
+                        <dic class="btn-text">Xóa</dic>
+                    </button>
+                    <button id="btnRefresh">
+                        <div class="btn-icon btn-icon-refresh"></div>
+                        <dic class="btn-text">Làm mới</dic>
+                    </button>
+                </div>
+                <!--Grid-->
+                <div class="grid">
+                    <table id="tbListCustomer" class="tableFixHead" width="100%" border="1">
+                        <thead>
+                            <tr>
+                                <th width="100px">Mã nhân viên</th>
+                                <th>Tên nhân viên</th>
+                                <th width="100px">Giới tính</th>
+                                <th width="100px">Ngày sinh</th>
+                                <th>Số điện thoại</th>
+                                <th>Email</th>
+                                <th>Vị trí</th>
+                                <th>Phòng ban</th>
+                                <th>Mức lương</th>
+                                <th>Tình trạng công việc</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Form thông tin chi tiết-->
+    <div id="frmDialogDetail" class="form-dialog" style="display:none">
+        <div class="dialog-modal"></div>
+        <div class="dialog">
+            <div class="dialog-titlebar">
+                <div class="title">Thông tin nhân viên</div>
+                <div id="btnCloseHeader" class="btn-close">x</div>
+            </div>
+            <div class="dialog-body">
+                <div class="title-group">Thông tin chung</div>
+                <div class="group-general-info">
+                    <div class="group-left">
+                        <div class="row">
+                            <label>Mã nhân viên <n class="label-required">(*)</n></label>
+                            <input id="txtCustomerCode" type="text" class="input-default" />
+                        </div>
+                        <div class="row">
+                            <label>Tên nhân viên <n class="label-required">(*)</n></label>
+                            <input id="txtCustomerCode" type="text" class="input-default" />
+                        </div>
+                        <div class="row">
+                            <label>Ngày sinh</label>
+                            <input id="dtBirthday" type="date" class="input-default" style=" margin-left: -3px;width: 160px;" />
+                            <label class="label-col-2">Giới tính</label>
+                            <select class="option-flex-auto input-default">
+                                <option>Nam</option>
+                                <option>Nữ</option>
+                            </select>
+                        </div>
+                        <div class="row">
+                            <label title="Email">Email <n class="label-required">(*)</n></label>
+                            <input id="txtEmail" type="tel" class="input-default" />
+                        </div>
+                        <div class="row">
+                            <label title="Số điện thoại di động">ĐT di động <n class="label-required">(*)</n></label>
+                            <input id="txtMobile" type="tel" class="input-default" />
+                        </div>
+                        <div class="row">
+                            <label title="Số chứng minh thư nhân dân hoặc sổ hộ chiếu">Số CMT/HC</label>
+                            <input id="txtMobile" type="tel" class="input-default flex-1" style=" margin-left: -3px;width: 150px;" />
+                            <label class="label-col-2">Ngày cấp</label>
+                            <input id="dtBirthday" type="date" class="input-default flex-1" />
+                        </div>
+                    </div>
+                    <div class="group-right">
+                        <div class="avatar-box">
+                            <button class="ct-btn ct-btn-avatar btn-select-avatar">...</button>
+                            <button class="ct-btn ct-btn-avatar btn-remove-avatar icon-cancel" disabled></button>
+                        </div>
+                        <div class="tip-upload">
+                            Chỉ được upload tệp <br /><b>.jpg .jpeg, .png, .gif</b>
+                        </div>
+                        <div class="box-select-avatar">
+                            <input type="file" hidden="hidden" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="margin-left: -3px">
+                    <label>Nơi cấp CMND</label>
+                    <input id="dtBirthday" type="text" class="input-default flex-1" />
+                </div>
+                <div class="title-group" style="margin-top:12px;">Thông tin công việc</div>
+                <div class="work-info-group">
+                    <div class="row">
+                        <label>Vị trí</label>
+                        <select class="option-flex-auto input-default" style="margin-left: -2px">
+                            <option>Giám đốc trung tâm</option>
+                            <option>Trưởng phòng</option>
+                            <option>Nhân viên</option>
+                        </select>
+                    </div>
+                    <div class="row">
+                        <label>Phòng ban</label>
+                        <select class="option-flex-auto input-default" style="margin-left: -2px">
+                            <option>Phòng đào tạo</option>
+                            <option>Phòng nghiên cứu</option>
+                        </select>
+                    </div>
+                    <div class="row">
+                        <label>Mã số thuế cá nhân</label>
+                        <input id="txtTaxCode" type="text" class="input-default" style="margin-left: -2px; width:160px;" />
+                        <label class="label-col-2" style="width:65px">Mức lương</label>
+                        <input id="dtBirthday" type="text" class="input-default flex-1" style="text-align:right; padding-right: 45px;" />
+                        <span style="position: absolute; right: 12px; font-style:italic"> &nbsp;(VNĐ)</span>
+                    </div>
+                    <div class="row">
+                        <label>Ngày gia nhập</label>
+                        <input id="txtTaxCode" type="date" class="input-default" style="margin-left: -2px; width:160px;" />
+                        <label class="label-col-2" style="width:65px">Tình trạng</label>
+                        <select class="option-flex-auto input-default">
+                            <option>Đang làm việc</option>
+                            <option>Đã nghỉ việc</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!--<div class="row" style="align-items:start">
+                    <label style="line-height:25px;">Ghi chú</label>
+                    <textarea id="txtNote" type="text" class="input-default flex-grow-1" style="height:50px;"></textarea>
+                </div>-->
+                <div class="ct-row dialog-footer">
+                    <div class="footer-right">
+                        <button id="btnSaveDetail" class="ct-btn btnSaveDetail"><div class="btn-icon-16 btn-icon-save"></div>Lưu</button>
+                        <button id="btnSaveAddDetail" class="ct-btn margin-left-8 margin-right-8" style="width:125px;"><div class="btn-icon-16 btn-icon-saveadd"></div>Lưu &amp; thêm</button>
+                        <button id="btnCancelDialog" class="ct-btn"><div class="btn-icon-16 btn-icon-close"></div>Hủy bỏ</button>
+                    </div>
+                    <div class="footer-left">
+                        <button class="ct-btn btn-align-left"><div class="btn-icon-16 btn-icon-help"></div>Giúp</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="/js/lib/jquery-3.5.1.min.js"></script>
+    <script src="/js/helps/resource.js"></script>
+    <script src="/js/helps/common.js"></script>
+    <script src="/js/page/employee.js"></script>
+</body>
+</html>

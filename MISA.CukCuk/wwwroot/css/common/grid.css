@@ -1,0 +1,104 @@
+﻿.grid {
+    width: 100%;
+    height: calc(100% - 28px);
+    border: 1px solid #d9d9d9;
+    border-top: none;
+    overflow:auto;
+}
+/*  
+    css sử dụng cho grid dữ liệu
+    Author: NVTHUC (10/05/2021)
+*/
+/*.grid {
+    position: absolute;
+    width: 100%;
+    bottom: 27px;
+    left: 0;
+    top: 27px;
+    overflow-x: auto;
+    border: 1px solid #d9d9d9;
+}*/
+
+    .grid .grid-row {
+       /* border-style: solid;
+        border-width: 1px 0 0;
+        border-color: #ccc;*/
+        cursor: pointer;
+    }
+
+        .grid .grid-row:hover {
+            background-color: #9bc7e366;
+        }
+
+        .grid .grid-row.row-selected {
+            background-color: #9bc7e366;
+        }
+
+    .grid .grid-row-alt {
+        background-color: #fafafa;
+    }
+
+    .grid .grid-cell-inner {
+        text-overflow: ellipsis;
+        padding: 5px 10px 4px 10px;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+/*  
+    css sử dụng cho bảng dữ liệu
+    Author: NVTHUC (10/05/2021)
+*/
+.tableFixHead {
+    overflow-y: auto;
+    min-width:100%;
+}
+
+    .tableFixHead thead th {
+        position: sticky;
+        text-align: center;
+        top: 0;
+/*        border-bottom: 1px solid #d9d9d9;*/
+    }
+
+/* Just common table stuff. Really. */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border-color: #d9d9d9;
+    border-style: solid;
+    border-left: 0px !important;
+    border-right: 0px;
+    border-top: 0px;
+}
+
+    table tbody {
+/*        border-bottom: 1px solid #d9d9d9;*/
+    }
+
+    table thead tr th {
+        font-weight: normal;
+/*        border-bottom: 1px solid #d9d9d9;*/
+    }
+
+th, td {
+    padding: 2px;
+    border-right: 1px solid #d9d9d9;
+}
+
+th {
+    background: #ededed;
+    background-image: none;
+    outline: 0;
+    color: #000;
+    white-space: nowrap;
+    padding:5px;
+}
+
+    table tbody tr:hover {
+        background-color: #bfd1fe;
+        cursor:pointer
+    }
+
+    table tbody tr.row-selected {
+        background-color: #a4befc;
+    }

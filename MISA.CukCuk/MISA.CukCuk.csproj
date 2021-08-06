@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>835fa8cb-1ca5-4969-9931-6508ea1bf372</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.6">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.6">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.9" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="3.1.2" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\content\vendors\bootstrap-4.3.1\.github\CODEOWNERS" />
+    <None Include="wwwroot\content\vendors\bootstrap-4.3.1\.github\CONTRIBUTING.md" />
+    <None Include="wwwroot\content\vendors\bootstrap-4.3.1\.github\ISSUE_TEMPLATE\bug.md" />
+    <None Include="wwwroot\content\vendors\bootstrap-4.3.1\.github\ISSUE_TEMPLATE\bug_report.md" />
+    <None Include="wwwroot\content\vendors\bootstrap-4.3.1\.github\ISSUE_TEMPLATE\feature.md" />
+    <None Include="wwwroot\content\vendors\bootstrap-4.3.1\.github\ISSUE_TEMPLATE\feature_request.md" />
+    <None Include="wwwroot\content\vendors\bootstrap-4.3.1\.github\SUPPORT.md" />
+  </ItemGroup>
+
+
+</Project>

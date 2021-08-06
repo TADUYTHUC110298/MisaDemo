@@ -1,0 +1,71 @@
+﻿.dialog {
+    width: 700px;
+}
+
+.group-general-info {
+    display: flex;
+}
+
+    .group-general-info .group-left {
+        width: 100%;
+    }
+
+    .group-general-info .group-right {
+        padding: 2px 0;
+        margin-left: 8px;
+    }
+
+.avatar-box {
+    position: relative;
+    width: 130px;
+    height: 140px;
+    border: 1px solid #ccc;
+    background-image: url('/content/images/avatardefault.png');
+    background-position-y: -8px;
+    background-position-x: center;
+}
+
+    .avatar-box .btn-select-avatar {
+        position: absolute;
+        bottom: 8px;
+        left: 24px;
+    }
+
+    .avatar-box .btn-remove-avatar {
+        position: absolute;
+        bottom: 8px;
+        right: 24px;
+    }
+
+    .avatar-box .ct-btn-avatar {
+        min-width: 35px !important;
+        height: 22px;
+        line-height: 7px;
+    }
+
+        .avatar-box .ct-btn-avatar .btn-remove-avatar {
+            color: #f00;
+        }
+
+.dialog input[type=text], .dialog input[type=tel], .dialog input[type=email], .dialog textarea {
+    width: calc(100% - 135px);
+}
+
+.dialog .option-flex-auto {
+    flex: auto;
+}
+
+.input-fill-with {
+    width: calc(100% - 135px) !important;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.tip-upload {
+    padding-top: 4px;
+    text-align: center;
+    /*    font-size: 12px;*/
+    font-style: italic;
+}

@@ -1,0 +1,37 @@
+﻿/* css dùng chung cho các icons */
+.icon {
+    color: #157fcc;
+    padding-right: 8px;
+}
+
+.icon-edit:before {
+    content: '';
+}
+
+.icon-logout:before {
+    content: '';
+}
+
+.icon-globe:before {
+    content: '';
+}
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+    font-family: "fontello";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 40px;
+    margin-left: .2em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    cursor: pointer;
+    height: 100%;
+}

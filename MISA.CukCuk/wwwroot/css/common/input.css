@@ -1,0 +1,19 @@
+﻿.input-default {
+    padding: 0px 4px;
+    border-radius: 0;
+    height:24px;
+    box-shadow: none;
+    border: 1px solid #ccc;
+}
+textarea.input-default{
+    padding:2px 4px;
+}
+.input-default:focus {
+    border: 1px solid #0071c1;
+    outline-offset: unset !important;
+    outline: none !important;
+}
+
+input[type=date]{
+    text-align:center;
+}
